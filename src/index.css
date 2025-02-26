@@ -200,3 +200,66 @@ body {
     margin-left: 10px;
     font-size: 14px;
 }
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    /* Reduzir o container principal */
+    .nav-container,
+    .product-container,
+    .transparency-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Empilhar elementos no cabeçalho */
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustar links de navegação */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Reduzir tamanho do logo */
+    #logo {
+        height: 25px;
+    }
+
+    /* Empilhar produto e detalhes */
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-image {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-details {
+        padding-left: 0;
+    }
+
+    /* Alterar grid da seção de transparência */
+    .transparency-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Ajustar container principal */
+    .nav-container,
+    .product-container,
+    .transparency-section {
+        width: 90%;
+    }
+
+    /* Ajustar grid da seção de transparência */
+    .transparency-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
