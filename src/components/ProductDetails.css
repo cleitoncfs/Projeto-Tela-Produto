@@ -1,0 +1,151 @@
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.product-image {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-details {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-rating-and-reviews {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-rating i {
+    color: #f8ce0b;
+}
+
+.reviews-count {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-colors h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.color-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.color-option {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-option:hover {
+    border: 2px solid #ccc;
+}
+
+.color-option[data-color="Dark Navy"] {
+    background-color: #000080;
+}
+
+.color-option[data-color="Black"] {
+    background-color: #000;
+}
+
+.color-option[data-color="Grey"] {
+    background-color: #808080;
+}
+
+.product-sizes {
+    margin-bottom: 20px;
+}
+
+.product-sizes h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-sizes select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.add-to-cart-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #333;
+}
+
+.product-description {
+    margin-top: 20px;
+}
+
+.product-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para as estrelas */
+.product-rating svg {
+    color: #f8ce0b; /* Cor amarela para as estrelas */
+    font-size: 16px; /* Tamanho das estrelas */
+}
+
+.reviews-count {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    /* Empilhar produto e detalhes */
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-image {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-details {
+        padding-left: 0;
+    }
+}

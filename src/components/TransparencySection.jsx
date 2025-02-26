@@ -1,3 +1,5 @@
+import "./TransparencySection.css";
+
 const TransparencySection = () => {
     return (
         <div className="transparency-section">

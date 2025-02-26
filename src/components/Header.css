@@ -1,0 +1,113 @@
+/* Header principal */
+.header {
+    padding: 10px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Container de navegação */
+.nav-container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Links de navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+#logo {
+    height: 30px;
+}
+
+/* Ícones do cabeçalho */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.header-icons i {
+    transition: 0.4s;
+}
+
+.nav-links li a:hover,
+.header-icons i:hover {
+    color: #ccc;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Botão Hamburger */
+.hamburger {
+    display: none; /* Oculto por padrão */
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #000;
+    z-index: 1000; /* Garante que o botão esteja visível */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+
+        /* Ocultando por padrão */
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        display: flex;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-container {
+        width: 90%;
+    }
+}

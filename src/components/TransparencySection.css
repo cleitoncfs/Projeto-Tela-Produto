@@ -1,0 +1,55 @@
+.transparency-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.transparency-box {
+    padding: 20px;
+}
+
+.transparency-box h2,
+.transparency-box h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+}
+
+.transparency-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+.transparency-box a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #007bff;
+}
+
+.transparency-box a:hover {
+    text-decoration: underline;
+}
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    /* Alterar grid da seção de transparência */
+    .transparency-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Ajustar grid da seção de transparência */
+    .transparency-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
