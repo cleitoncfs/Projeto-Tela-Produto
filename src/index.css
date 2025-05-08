@@ -1,4 +1,11 @@
 body {
     margin: 0;
+    padding: 0;
+    padding-top: 80px; /* altura do header */
+    box-sizing: border-box;
     font-family: Helvetica, sans-serif;
+}
+
+main {
+    padding-top: 80px; /* ajuste conforme a altura real da sua navbar */
 }

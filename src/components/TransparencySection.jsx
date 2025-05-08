@@ -3,7 +3,7 @@ import "./TransparencySection.css";
 const TransparencySection = () => {
     return (
         <div className="transparency-section">
-            <div className="transparency-box">
+            <div className="transparency-box" data-aos="fade-up">
                 <h2>Transparência Total</h2>
                 <p>
                     Compreender e valorizar a importância de nossa vestimenta é
@@ -12,17 +12,29 @@ const TransparencySection = () => {
                     temos, e como resultado - menos necessitaremos.
                 </p>
             </div>
-            <div className="transparency-box">
+            <div
+                className="transparency-box"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
                 <h3>Custo de Produção</h3>
                 <p>Detalhes todos os custos que temos para criar o produto.</p>
                 <a href="#">Ver detalhamento de custos</a>
             </div>
-            <div className="transparency-box">
+            <div
+                className="transparency-box"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
                 <h3>Rastreabilidade</h3>
                 <p>Saiba de onde vem o material para as suas roupas.</p>
                 <a href="#">Mostrar origem do produto</a>
             </div>
-            <div className="transparency-box">
+            <div
+                className="transparency-box"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
                 <h3>Impacto de CO2</h3>
                 <p>
                     Veja a redução de impacto ambiental que tivemos no ano de

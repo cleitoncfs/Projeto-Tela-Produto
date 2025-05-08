@@ -5,6 +5,7 @@ import {
     faSearch,
     faShoppingCart,
     faBars,
+    faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
@@ -12,48 +13,58 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        console.log("Estado anterior:", menuOpen);
-        setMenuOpen(!menuOpen);
-        console.log("Novo estado:", !menuOpen);
+        setMenuOpen((prev) => !prev);
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false);
     };
 
     return (
-        <header className="header">
-            <div className="nav-container">
-                {/* Botão Hamburger */}
-                <button className="hamburger" onClick={toggleMenu}>
-                    <FontAwesomeIcon icon={faBars} />
-                </button>
+        <>
+            {/* Overlay escurecido */}
+            {menuOpen && <div className="overlay" onClick={closeMenu}></div>}
 
-                {/* Logo */}
-                <img id="logo" src={logo} alt="Loja de roupas" />
+            <header className="header" data-aos="fade-down">
+                <div className="nav-container">
+                    <button
+                        className="hamburger"
+                        onClick={toggleMenu}
+                        aria-label="Menu"
+                    >
+                        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+                    </button>
 
-                {/* Links de Navegação */}
-                <nav>
-                    <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+                    <img id="logo" src={logo} alt="Loja de roupas" />
+
+                    <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
                         <li>
-                            <a href="#">Camisas</a>
+                            <a href="#" onClick={closeMenu}>
+                                Camisas
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Calças</a>
+                            <a href="#" onClick={closeMenu}>
+                                Calças
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Acessórios</a>
+                            <a href="#" onClick={closeMenu}>
+                                Acessórios
+                            </a>
                         </li>
-                    </ul>
-                </nav>
+                    </nav>
 
-                {/* Ícones do Cabeçalho */}
-                <div className="header-icons">
-                    <div className="icon search-icon">
-                        <FontAwesomeIcon icon={faSearch} />
-                    </div>
-                    <div className="icon cart-icon">
-                        <FontAwesomeIcon icon={faShoppingCart} />
+                    <div className="header-icons">
+                        <FontAwesomeIcon icon={faSearch} className="icon" />
+                        <FontAwesomeIcon
+                            icon={faShoppingCart}
+                            className="icon"
+                        />
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
+        </>
     );
 };
 

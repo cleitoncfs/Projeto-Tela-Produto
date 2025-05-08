@@ -1,54 +1,66 @@
 .transparency-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
+    gap: 1.5em;
     max-width: 1200px;
     margin: auto;
-    font-family: Arial, sans-serif;
-    color: #333;
+    padding: 3em 1em;
     background-color: #f8f8f8;
-    padding: 2em;
     box-sizing: border-box;
 }
 
 .transparency-box {
+    background: #fff;
     padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.transparency-box:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 26px;
+    color: rgb(29, 30, 31);
+    margin-bottom: 15px;
+    display: block;
 }
 
 .transparency-box h2,
 .transparency-box h3 {
-    margin: 0 0 15px 0;
-    font-size: 16px;
-    font-weight: normal;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
     color: #333;
 }
 
 .transparency-box p {
     font-size: 14px;
-    color: #666;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .transparency-box a {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     color: #007bff;
+    font-weight: 500;
 }
 
 .transparency-box a:hover {
     text-decoration: underline;
 }
 
-/* Para telas pequenas (celulares) */
+/* Responsividade */
 @media (max-width: 768px) {
-    /* Alterar grid da seção de transparência */
     .transparency-section {
         grid-template-columns: 1fr;
     }
 }
 
-/* Para tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
-    /* Ajustar grid da seção de transparência */
     .transparency-section {
         grid-template-columns: repeat(2, 1fr);
     }
